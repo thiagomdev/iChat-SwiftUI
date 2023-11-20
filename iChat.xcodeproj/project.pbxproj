@@ -14,6 +14,7 @@
 		AA4F6E892B0BF51C0028C4F8 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4F6E882B0BF51C0028C4F8 /* SignInViewModel.swift */; };
 		AA4F6E8F2B0BFF600028C4F8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4F6E8E2B0BFF600028C4F8 /* SignUpView.swift */; };
 		AA4F6E912B0C00050028C4F8 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4F6E902B0C00050028C4F8 /* SignUpViewModel.swift */; };
+		AA7186202B0C12FA00A05ADA /* Extension+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA71861F2B0C12FA00A05ADA /* Extension+Layout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		AA4F6E882B0BF51C0028C4F8 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		AA4F6E8E2B0BFF600028C4F8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		AA4F6E902B0C00050028C4F8 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		AA71861F2B0C12FA00A05ADA /* Extension+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Layout.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		AA4F6E8A2B0BFD450028C4F8 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				AA71861E2B0C12E000A05ADA /* Extension+Layout */,
 				AA4F6E8D2B0BFD580028C4F8 /* Domain */,
 				AA4F6E8C2B0BFD550028C4F8 /* Presentation */,
 				AA4F6E8B2B0BFD530028C4F8 /* UI */,
@@ -170,6 +173,14 @@
 			children = (
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		AA71861E2B0C12E000A05ADA /* Extension+Layout */ = {
+			isa = PBXGroup;
+			children = (
+				AA71861F2B0C12FA00A05ADA /* Extension+Layout.swift */,
+			);
+			path = "Extension+Layout";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA4F6E8F2B0BFF600028C4F8 /* SignUpView.swift in Sources */,
+				AA7186202B0C12FA00A05ADA /* Extension+Layout.swift in Sources */,
 				9C0B9A42270F691D00DF2B5F /* SignInView.swift in Sources */,
 				AA4F6E912B0C00050028C4F8 /* SignUpViewModel.swift in Sources */,
 				9C0B9A40270F691D00DF2B5F /* iChatApp.swift in Sources */,

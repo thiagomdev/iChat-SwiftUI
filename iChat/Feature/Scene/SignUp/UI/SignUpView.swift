@@ -75,7 +75,6 @@ struct SignUpView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(.horizontal, 32)
         .background(Color.init(red: 10/255, green: 100/255, blue: 100/255))
-        .ignoresSafeArea()
     }
 }
 
