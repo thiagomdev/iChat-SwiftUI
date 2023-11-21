@@ -1,10 +1,11 @@
 import SwiftUI
 
 struct SignInView: View {
+    enum Layout {}
     @StateObject private var viewModel: SignInViewModel = SignInViewModel()
     
     var body: some View {
-        NavigationStack {
+        ScrollView(showsIndicators: false) {
             VStack {
                 Spacer()
                 Image(.chatLogo)
@@ -17,11 +18,11 @@ struct SignInView: View {
                     .autocorrectionDisabled(false)
                     .padding()
                     .background(Color.white)
-                    .cornerRadius(24.0)
+                    .cornerRadius(Layout.Dimentions.cornerRadius)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 24.0)
+                        RoundedRectangle(cornerRadius: Layout.Dimentions.cornerRadius)
                             .strokeBorder(Color(UIColor.separator),
-                             style: StrokeStyle(lineWidth: 1.0))
+                                          style: StrokeStyle(lineWidth: Layout.Dimentions.lineWidth))
                     )
                     .padding(.bottom)
                 SecureField("Password", text: $viewModel.password)
@@ -29,14 +30,14 @@ struct SignInView: View {
                     .autocorrectionDisabled(false)
                     .padding()
                     .background(Color.white)
-                    .cornerRadius(24.0)
+                    .cornerRadius(Layout.Dimentions.cornerRadius)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 24.0)
+                        RoundedRectangle(cornerRadius: Layout.Dimentions.cornerRadius)
                             .strokeBorder(Color(UIColor.separator),
-                             style: StrokeStyle(lineWidth: 1.0))
+                                          style: StrokeStyle(lineWidth: Layout.Dimentions.lineWidth))
                     )
                     .padding(.bottom)
-
+                
                 Button {
                     viewModel.singIn()
                 } label: {
@@ -45,12 +46,12 @@ struct SignInView: View {
                         .frame(maxWidth: .infinity)
                         .padding()
                         .background(Color.green)
-                        .cornerRadius(24.0)
+                        .cornerRadius(Layout.Dimentions.cornerRadius)
                         .foregroundColor(.white)
                 }
-               
+                
                 Divider()
-                    .padding([.top, .bottom], 130)
+                    .padding([.top, .bottom], Layout.Padding.topAndBottom)
                 Button {
                     viewModel.showModal.toggle()
                 } label: {
@@ -58,16 +59,15 @@ struct SignInView: View {
                         .font(.subheadline).bold()
                         .foregroundColor(.black)
                 }
-                .padding(.bottom, 20)
+                .padding(.vertical, Layout.Padding.bottom)
                 .sheet(isPresented: $viewModel.showModal) {
                     SignUpView()
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .padding(.horizontal, 32)
-            .background(Color.init(red: 10/255, green: 100/255, blue: 100/255))
-            .ignoresSafeArea()
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(.horizontal, Layout.Padding.horizontal)
+        .background(Color.init(red: 10/255, green: 100/255, blue: 100/255))
     }
 }
 
