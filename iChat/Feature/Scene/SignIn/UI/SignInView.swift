@@ -13,7 +13,7 @@ struct SignInView: View {
                     .scaledToFit()
                     .padding()
                 
-                TextField("Email", text: $viewModel.email)
+                TextField(Layout.Strings.emailPlaceholder, text: $viewModel.email)
                     .autocapitalization(.none)
                     .autocorrectionDisabled(false)
                     .padding()
@@ -25,7 +25,7 @@ struct SignInView: View {
                                           style: StrokeStyle(lineWidth: Layout.Dimentions.lineWidth))
                     )
                     .padding(.bottom)
-                SecureField("Password", text: $viewModel.password)
+                SecureField(Layout.Strings.passwordPlaceholder, text: $viewModel.password)
                     .autocapitalization(.none)
                     .autocorrectionDisabled(false)
                     .padding()
@@ -41,7 +41,7 @@ struct SignInView: View {
                 Button {
                     viewModel.singIn()
                 } label: {
-                    Text("Sign In")
+                    Text(Layout.Strings.signIn)
                         .font(.title3).bold()
                         .frame(maxWidth: .infinity)
                         .padding()
@@ -55,7 +55,7 @@ struct SignInView: View {
                 Button {
                     viewModel.showModal.toggle()
                 } label: {
-                    Text("Don't have an account? SignUp here.")
+                    Text(Layout.Strings.dontHaveAnAccount)
                         .font(.subheadline).bold()
                         .foregroundColor(.black)
                 }

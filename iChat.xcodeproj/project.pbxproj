@@ -59,6 +59,7 @@
 		9C0B9A3E270F691D00DF2B5F /* iChat */ = {
 			isa = PBXGroup;
 			children = (
+				AA7186212B0CCD1500A05ADA /* Core */,
 				AA4F6E802B0BF4190028C4F8 /* Start */,
 				AA4F6E872B0BF4F60028C4F8 /* Resources */,
 				AA4F6E812B0BF4AE0028C4F8 /* Feature */,
@@ -144,7 +145,6 @@
 		AA4F6E8A2B0BFD450028C4F8 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				AA71861E2B0C12E000A05ADA /* Extension+Layout */,
 				AA4F6E8D2B0BFD580028C4F8 /* Domain */,
 				AA4F6E8C2B0BFD550028C4F8 /* Presentation */,
 				AA4F6E8B2B0BFD530028C4F8 /* UI */,
@@ -181,6 +181,14 @@
 				AA71861F2B0C12FA00A05ADA /* Extension+Layout.swift */,
 			);
 			path = "Extension+Layout";
+			sourceTree = "<group>";
+		};
+		AA7186212B0CCD1500A05ADA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AA71861E2B0C12E000A05ADA /* Extension+Layout */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
