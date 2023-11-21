@@ -7,7 +7,7 @@ extension SignInView.Layout {
     }
     
     enum Padding {
-        static var bottom: CGFloat = 20.0
+        static var bottom: CGFloat = 80.0
         static var topAndBottom: CGFloat = 130.0
         static var horizontal: CGFloat = 32.0
     }

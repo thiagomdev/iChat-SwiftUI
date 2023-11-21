@@ -5,7 +5,7 @@ struct SignInView: View {
     @StateObject private var viewModel: SignInViewModel = SignInViewModel()
     
     var body: some View {
-        NavigationStack {
+        ScrollView(showsIndicators: false) {
             VStack {
                 Spacer()
                 Image(.chatLogo)
@@ -34,10 +34,10 @@ struct SignInView: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: Layout.Dimentions.cornerRadius)
                             .strokeBorder(Color(UIColor.separator),
-                             style: StrokeStyle(lineWidth: Layout.Dimentions.lineWidth))
+                                          style: StrokeStyle(lineWidth: Layout.Dimentions.lineWidth))
                     )
                     .padding(.bottom)
-
+                
                 Button {
                     viewModel.singIn()
                 } label: {
@@ -49,7 +49,7 @@ struct SignInView: View {
                         .cornerRadius(Layout.Dimentions.cornerRadius)
                         .foregroundColor(.white)
                 }
-               
+                
                 Divider()
                     .padding([.top, .bottom], Layout.Padding.topAndBottom)
                 Button {
@@ -59,15 +59,15 @@ struct SignInView: View {
                         .font(.subheadline).bold()
                         .foregroundColor(.black)
                 }
-                .padding(.bottom, Layout.Padding.bottom)
+                .padding(.vertical, Layout.Padding.bottom)
                 .sheet(isPresented: $viewModel.showModal) {
                     SignUpView()
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .padding(.horizontal, Layout.Padding.horizontal)
-            .background(Color.init(red: 10/255, green: 100/255, blue: 100/255))
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(.horizontal, Layout.Padding.horizontal)
+        .background(Color.init(red: 10/255, green: 100/255, blue: 100/255))
     }
 }
 
