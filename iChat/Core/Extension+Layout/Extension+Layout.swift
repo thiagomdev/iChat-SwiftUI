@@ -11,4 +11,11 @@ extension SignInView.Layout {
         static var topAndBottom: CGFloat = 130.0
         static var horizontal: CGFloat = 32.0
     }
+    
+    enum Strings {
+        static var emailPlaceholder: String = "Email"
+        static var passwordPlaceholder: String = "Password"
+        static var signIn: String = "Sign In"
+        static var dontHaveAnAccount: String = "Don't have an account? SignUp here."
+    }
 }
